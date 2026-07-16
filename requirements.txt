@@ -1,0 +1,32 @@
+# Core (used by the app)
+openai>=2.37.0
+elasticsearch==8.4.3
+sentence-transformers>=5.5.0
+psycopg[binary]>=3.3.4
+streamlit>=1.40.0
+python-frontmatter>=1.1.0
+python-dotenv>=1.2.2
+requests>=2.34.2
+
+# Analysis and evaluation notebooks
+pandas
+tqdm
+matplotlib
+seaborn
+scikit-learn
+tenacity
+jupyterlab
+ipywidgets
+
+# Extra toolbox carried over from the course (rebuild-avoidance: cheaper to
+# have them idle than to rebuild mid-experiment)
+python-docx
+transformers
+fastembed
+minsearch>=0.0.11
+sqlitesearch>=0.0.5
+toyaikit>=0.0.11
+gitsource>=0.0.5
+onnxruntime>=1.20.0
+tokenizers>=0.20.0
+huggingface-hub>=0.27.0

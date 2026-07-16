@@ -1,0 +1,158 @@
+# ==============================================================================
+# Obsidian Assistant stack
+# ==============================================================================
+# Self-contained: search engine, database, dashboards, the app and a Jupyter
+# service for development and evaluation notebooks. App and notebook share
+# the same image; only the command differs.
+#
+# Requires a .env file (see .env.example). Without VAULT_PATH it runs against
+# the committed demo_vault, so a fresh clone works out of the box.
+# ==============================================================================
+
+services:
+  # ----------------------------------------------------------------------------
+  # elasticsearch - retrieval engine: BM25 text search + dense_vector kNN,
+  # fused with reciprocal rank fusion in the app.
+  # ----------------------------------------------------------------------------
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.4.3
+    container_name: assistant_es
+    restart: unless-stopped
+    mem_limit: 2g
+    environment:
+      ES_JAVA_OPTS: "-Xms1g -Xmx1g"       # a personal vault fits in 1 GB heap
+      discovery.type: single-node
+      xpack.security.enabled: "false"     # local use only
+    ports:
+      - "${ES_PORT:-9200}:9200"
+    volumes:
+      - es_data:/usr/share/elasticsearch/data
+    networks:
+      - assistant-net
+
+  # ----------------------------------------------------------------------------
+  # postgres - conversation and feedback log. Born with the right database,
+  # so setup is just docker compose up + make init-db.
+  # ----------------------------------------------------------------------------
+  postgres:
+    image: postgres:18
+    container_name: assistant_pg
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: obsidian_assistant
+      POSTGRES_USER: ${POSTGRES_USER:-user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-pswd}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql        # pg18+ mount convention
+    networks:
+      - assistant-net
+
+  # ----------------------------------------------------------------------------
+  # grafana - operational dashboard reading straight from postgres.
+  # Datasource and dashboards are provisioned from the repo.
+  # ----------------------------------------------------------------------------
+  grafana:
+    image: grafana/grafana
+    container_name: assistant_grafana
+    restart: unless-stopped
+    ports:
+      - "${GRAFANA_PORT:-3000}:3000"
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_PASSWORD:-admin}
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./grafana/provisioning:/etc/grafana/provisioning
+      - ./grafana/dashboards:/var/lib/grafana/dashboards
+    depends_on:
+      - postgres
+    networks:
+      - assistant-net
+
+  # ----------------------------------------------------------------------------
+  # app - Streamlit UI. The vault is mounted read-only: the assistant reads
+  # notes, it never touches them. The package is bind-mounted so code edits
+  # apply without rebuilding the image.
+  # ----------------------------------------------------------------------------
+  app:
+    build: .
+    container_name: assistant_app
+    restart: unless-stopped
+    ports:
+      - "${APP_PORT:-8501}:8501"
+    environment: &app-env
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      ELASTIC_HOST: "http://elasticsearch:9200"
+      POSTGRES_HOST: "postgres"
+      POSTGRES_USER: ${POSTGRES_USER:-user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-pswd}
+      APP_POSTGRES_DB: "obsidian_assistant"
+      VAULT_PATH: "/vault"
+      LLM_MODEL: ${LLM_MODEL:-gpt-5.4-mini}
+      EMBED_MODEL: ${EMBED_MODEL:-all-MiniLM-L6-v2}
+      ES_INDEX: ${ES_INDEX:-obsidian_notes}
+    volumes:
+      - ./assistant:/app
+      - ${VAULT_PATH:-./demo_vault}:/vault:ro
+    depends_on:
+      - elasticsearch
+      - postgres
+    networks:
+      - assistant-net
+
+  # ----------------------------------------------------------------------------
+  # notebook - Jupyter Lab on the same image, for development and the
+  # evaluation notebooks. Mounts the whole repo, so notebooks/, data/ and
+  # the package are all editable and importable.
+  # ----------------------------------------------------------------------------
+  notebook:
+    build: .
+    container_name: assistant_notebook
+    restart: unless-stopped
+    command: >
+      jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root
+      --ServerApp.root_dir=/project
+      --IdentityProvider.token=${JUPYTER_TOKEN:-dev}
+    ports:
+      - "${JUPYTER_PORT:-8888}:8888"
+    environment: *app-env
+    volumes:
+      - .:/project
+      - ${VAULT_PATH:-./demo_vault}:/vault:ro
+    depends_on:
+      - elasticsearch
+      - postgres
+    networks:
+      - assistant-net
+
+  # ----------------------------------------------------------------------------
+  # ollama - optional local LLM, off by default. Start it with:
+  #   docker compose --profile ollama up -d
+  #   docker compose exec ollama ollama pull llama3.2:3b
+  # and point the app at it in .env:
+  #   LLM_BASE_URL=http://ollama:11434/v1
+  #   LLM_MODEL=llama3.2:3b
+  # For GPU acceleration combine with docker-compose.gpu.yml.
+  # ----------------------------------------------------------------------------
+  ollama:
+    image: ollama/ollama
+    container_name: assistant_ollama
+    restart: unless-stopped
+    profiles: ["ollama"]
+    ports:
+      - "${OLLAMA_PORT:-11434}:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    networks:
+      - assistant-net
+
+networks:
+  assistant-net:
+    driver: bridge
+
+volumes:
+  es_data:
+  pg_data:
+  grafana_data:
+  ollama_data:

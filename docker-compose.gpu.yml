@@ -1,0 +1,16 @@
+# Optional GPU override for machines with an NVIDIA card and the
+# nvidia-container-toolkit. The base compose stays CPU-only so the project
+# runs anywhere; this file adds acceleration where available:
+#
+#   docker compose -f docker-compose.yml -f docker-compose.gpu.yml \
+#       --profile ollama up -d
+
+services:
+  ollama:
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
