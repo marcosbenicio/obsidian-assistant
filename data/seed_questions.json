@@ -1,0 +1,1002 @@
+[
+  {
+    "question": "why cant a plain llm answer questions about my own documents",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/01-intro-agentic-rag.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "where should I put my openai api key so it does not end up on github",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/02-environment.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "what are the main components of a rag pipeline",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/03-rag.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "what information does each entry in the faq dataset contain",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/04-dataset.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "what is the difference between text fields and keyword fields in the search index",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/05-search.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "why do we keep the instructions separate from the user prompt",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/06-building-prompt.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "why does the course use the responses api instead of chat completions",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/07-llm.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "why put the rag code into a class instead of plain functions",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/08-rag-helper.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "how do I make the search index survive a restart without reindexing everything",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/09-data-ingestion.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "should I fine tune the model on my data or just use rag",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/10-rag-next-steps.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "what makes a system agentic instead of a fixed pipeline",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/11-agents-intro.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "why does a small typo in my question break the search results",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/12-rag-revision.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "how does the model decide when it should call a function",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/13-function-calling.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "when does the agent loop know it is time to stop",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/14-agentic-loop.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "can the framework generate the tool schema so I dont have to write json by hand",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/15-frameworks.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "when is plain rag good enough that I dont need an agent",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/16-other-frameworks.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "what is the difference between searching by keywords and searching by meaning",
+    "path": "llm-zoomcamp-2026/02-vector-search/01-intro-vector-search.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "how do I install sentence transformers without pulling in the huge gpu version of pytorch",
+    "path": "llm-zoomcamp-2026/02-vector-search/02-embeddings.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "why do we split the documents into batches when generating the embeddings",
+    "path": "llm-zoomcamp-2026/02-vector-search/03-embeddings-dataset.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "why do we return five results instead of just the single best match",
+    "path": "llm-zoomcamp-2026/02-vector-search/04-vector-search.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "how do I make vector search only look at documents from one course",
+    "path": "llm-zoomcamp-2026/02-vector-search/05-minsearch-vector.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "what do I need to change in my rag pipeline to use vector search instead of text search",
+    "path": "llm-zoomcamp-2026/02-vector-search/06-rag-vector.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "can I open my saved vector index later without embedding all the documents again",
+    "path": "llm-zoomcamp-2026/02-vector-search/07-sqlitesearch-vector.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "can I use postgres as my vector database instead of a dedicated one",
+    "path": "llm-zoomcamp-2026/02-vector-search/08-pgvector.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "is there a lighter way to run the embedding model in production without pytorch",
+    "path": "llm-zoomcamp-2026/02-vector-search/09-onnx-embedder.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "when should I add vector search to my project instead of sticking with text search",
+    "path": "llm-zoomcamp-2026/02-vector-search/10-next-steps.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "how is offline evaluation different from online evaluation",
+    "path": "llm-zoomcamp-2026/04-evaluation/01-intro-evaluation.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "why do my documents need unique ids before I can evaluate search",
+    "path": "llm-zoomcamp-2026/04-evaluation/02-ground-truth.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "how many parallel workers can I use before hitting api rate limits",
+    "path": "llm-zoomcamp-2026/04-evaluation/03-ground-truth-batch.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "what do the zeros and ones in the relevance lists mean",
+    "path": "llm-zoomcamp-2026/04-evaluation/04-search-evaluation.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "what is the difference between hit rate and mrr",
+    "path": "llm-zoomcamp-2026/04-evaluation/05-search-metrics.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "when should I switch from grid search to bayesian optimization for tuning",
+    "path": "llm-zoomcamp-2026/04-evaluation/06-search-tuning.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "why use a second llm to compare the generated answer with the original one",
+    "path": "llm-zoomcamp-2026/04-evaluation/11-evaluation-intro.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "how do I run rag on all my test questions and save the answers for grading later",
+    "path": "llm-zoomcamp-2026/04-evaluation/12-rag-answers.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "can I use another llm to check if my judge is grading correctly",
+    "path": "llm-zoomcamp-2026/04-evaluation/13-llm-as-judge.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "how many times should the agent call the search tool for a normal question",
+    "path": "llm-zoomcamp-2026/04-evaluation/14-agent-evaluation.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "are there ready made frameworks for evaluating rag so I dont have to build everything myself",
+    "path": "llm-zoomcamp-2026/04-evaluation/15-next-steps.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "what is the difference between evaluating offline and monitoring the system once real users show up",
+    "path": "llm-zoomcamp-2026/05-monitoring/01-intro-monitoring.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "why don't we pass our own system prompt when creating the assistant",
+    "path": "llm-zoomcamp-2026/05-monitoring/02-assistant-setup.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "how do I calculate how much a single llm call costs",
+    "path": "llm-zoomcamp-2026/05-monitoring/04-metrics.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "why do the timestamps in the database need to include the time zone",
+    "path": "llm-zoomcamp-2026/05-monitoring/05-database.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "how do I get the recent conversations back out of the database",
+    "path": "llm-zoomcamp-2026/05-monitoring/06-querying.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "can I use sqlite instead of postgres for a small project",
+    "path": "llm-zoomcamp-2026/05-monitoring/07-streamlit-dashboard.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "how do I keep track of the conversation id between clicks in streamlit",
+    "path": "llm-zoomcamp-2026/05-monitoring/08-user-feedback.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "what does the judge look at when there is no reference answer to compare to",
+    "path": "llm-zoomcamp-2026/05-monitoring/09-built-in-judge.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "how do I add the thumbs up and down counts to the streamlit dashboard",
+    "path": "llm-zoomcamp-2026/05-monitoring/10-feedback-dashboard.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "how can I fill the database with fake conversations so the charts have something to show",
+    "path": "llm-zoomcamp-2026/05-monitoring/11-synthetic-data.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "how do I make a grafana panel only show data from the selected time range",
+    "path": "llm-zoomcamp-2026/05-monitoring/12-grafana.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "can I start postgres grafana and the app together with one command",
+    "path": "llm-zoomcamp-2026/05-monitoring/13-docker-compose.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "should I build the monitoring myself or use a ready made tool like langfuse",
+    "path": "llm-zoomcamp-2026/05-monitoring/14-next-steps.md",
+    "difficulty": "easy"
+  },
+  {
+    "question": "why do we code the whole thing ourselves first instead of grabbing a ready made toolkit",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/01-intro-agentic-rag.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "my phone guesses the next word when i type, is that basically what these big models are doing",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/01-intro-agentic-rag.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "what goes wrong if i ask the model about stuff that happened after it finished learning",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/01-intro-agentic-rag.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why do they push the cloud coding setup from github instead of everyone working on their own laptop",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/02-environment.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "how can i see what just this course is costing me apart from my other ai spending",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/02-environment.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "whats the least amount of money i have to load up before i can even make a call",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/02-environment.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why can the bot explain how to cook fish perfectly but knows nothing about our classes",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/03-rag.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "if i want to switch to a different ai company what parts of my code actually change",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/03-rag.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "do i still need to end my message with a hint word so the model completes the sentence like in the old days",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/03-rag.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "the data here comes ready to use, what messy work does that hide in a real project",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/04-dataset.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "how do we pull down the question lists for every class in one go",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/04-dataset.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "each class has a short web friendly name, what do we actually use it for",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/04-dataset.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why not just shove all thousand entries at the model and skip the picking step",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/05-search.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "how do i make a hit in the original question count for more than a hit in the answer text",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/05-search.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "i cant run docker on google colab, which lookup option still works there",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/05-search.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why does sloppy wording in the template let the model drift off and invent stuff",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/06-building-prompt.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "how do the matched entries get squashed into one block of text before going to the model",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/06-building-prompt.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "how will i eventually measure whether my wording works instead of just eyeballing it",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/06-building-prompt.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why do i have to send the entire back and forth again on every single call",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/07-llm.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "is there a shortcut to grab the reply text without digging through nested objects",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/07-llm.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "is it cheaper when the beginning of my message repeats between calls",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/07-llm.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why move the code out of the notebook into separate files",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/08-rag-helper.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "can i change how the assistant behaves without editing the helper file",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/08-rag-helper.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "does the thing doing the lookups have to be a specific library or just act the right way",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/08-rag-helper.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why pick the little database that ships with python instead of a big server product",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/09-data-ingestion.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "can i watch the number of stored entries grow while another notebook is still loading them in",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/09-data-ingestion.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "what would we do if the replacement backend took different arguments than the old one",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/09-data-ingestion.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why is baking the knowledge straight into the model a pain to keep current",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/10-rag-next-steps.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "how could the smarter version help a student who writes in spanish",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/10-rag-next-steps.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "what did the teacher find when he went through thousands of job postings",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/10-rag-next-steps.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "besides spelling mistakes what other situations trip up the one shot setup",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/11-agents-intro.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "what new moves does the assistant get once the model makes the choices",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/11-agents-intro.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "can the assistant come back and ask me what i actually meant",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/11-agents-intro.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why cant the setup take a second swing after a flopped lookup",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/12-rag-revision.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "im skipping the first half of the module, how do i grab the helper code to follow along",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/12-rag-revision.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "what demo in this lesson shows a single letter ruining the whole reply",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/12-rag-revision.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why do we describe our function in a data format instead of showing the model the python code",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/13-function-calling.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "when several requests happen in one turn how do the results get matched to the right one",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/13-function-calling.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "does the model look things up with my exact words or does it reword them first",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/13-function-calling.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why bother hand writing all this plumbing when libraries already do it",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/14-agentic-loop.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "how do i keep the helper from happily answering random board game trivia",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/14-agentic-loop.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "what extra brakes do serious libraries add so a run cant go on forever",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/14-agentic-loop.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why does the course use a little homemade library instead of the big popular ones",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/15-frameworks.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "how do i make my next question aware of what we discussed before",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/15-frameworks.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why do we bother telling the library exactly which model to run",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/15-frameworks.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why does the looping setup end up costing more money than the plain one",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/16-other-frameworks.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "if i pick a different library later how much of what i learned here still applies",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/16-other-frameworks.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "which library is the instructors personal favorite and what actually sold him on it",
+    "path": "llm-zoomcamp-2026/01-agentic-rag/16-other-frameworks.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why do the notes say not to reach for the smarter search approach right away when building something new",
+    "path": "llm-zoomcamp-2026/02-vector-search/01-intro-vector-search.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "does the heavy processing of all my documents happen ahead of time or while someone is waiting for an answer",
+    "path": "llm-zoomcamp-2026/02-vector-search/01-intro-vector-search.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why should i set up a totally separate workspace just for this part of the course",
+    "path": "llm-zoomcamp-2026/02-vector-search/01-intro-vector-search.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why do the closeness scores between two texts almost never come out below zero",
+    "path": "llm-zoomcamp-2026/02-vector-search/02-embeddings.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "once texts are turned into lists of numbers how do i actually measure how alike two of them are",
+    "path": "llm-zoomcamp-2026/02-vector-search/02-embeddings.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why does the very first run take longer than every run after it",
+    "path": "llm-zoomcamp-2026/02-vector-search/02-embeddings.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why stick each entrys question and its answer together into one text before converting it",
+    "path": "llm-zoomcamp-2026/02-vector-search/03-embeddings-dataset.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "how can i watch how far along the conversion is while all the texts get processed",
+    "path": "llm-zoomcamp-2026/02-vector-search/03-embeddings-dataset.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "in the final grid of numbers what does each row and each column stand for",
+    "path": "llm-zoomcamp-2026/02-vector-search/03-embeddings-dataset.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why is one big multiplication faster than checking documents one by one in a loop",
+    "path": "llm-zoomcamp-2026/02-vector-search/04-vector-search.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "the sorting puts the weakest matches first so whats the shortcut to get the strongest ones up front",
+    "path": "llm-zoomcamp-2026/02-vector-search/04-vector-search.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why might my best match be a different entry than the one shown in the lesson",
+    "path": "llm-zoomcamp-2026/02-vector-search/04-vector-search.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "the hand rolled numpy version already worked so why move to a library at all",
+    "path": "llm-zoomcamp-2026/02-vector-search/05-minsearch-vector.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "if i know the text search tool from the first chapter do i have to learn a new interface for this one",
+    "path": "llm-zoomcamp-2026/02-vector-search/05-minsearch-vector.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "what two things do you hand over when loading your data into the search tool",
+    "path": "llm-zoomcamp-2026/02-vector-search/05-minsearch-vector.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why was it barely any work to swap out the way the assistant looks stuff up",
+    "path": "llm-zoomcamp-2026/02-vector-search/06-rag-vector.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why cant the new lookup engine take the typed question directly like the old one did",
+    "path": "llm-zoomcamp-2026/02-vector-search/06-rag-vector.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "could the same trick help me switch to a different ai company later on",
+    "path": "llm-zoomcamp-2026/02-vector-search/06-rag-vector.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "whats the point of a lookup method that might miss the actual best match",
+    "path": "llm-zoomcamp-2026/02-vector-search/07-sqlitesearch-vector.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "how do i pick between the three speed up strategies depending on how much data i have",
+    "path": "llm-zoomcamp-2026/02-vector-search/07-sqlitesearch-vector.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "is there any situation where this classroom tool actually makes sense in the real world",
+    "path": "llm-zoomcamp-2026/02-vector-search/07-sqlitesearch-vector.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why does the query sort from smallest to biggest when looking for the best matches",
+    "path": "llm-zoomcamp-2026/02-vector-search/08-pgvector.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "how do i make sure my stored records survive when the container gets stopped and started again",
+    "path": "llm-zoomcamp-2026/02-vector-search/08-pgvector.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "the add on already comes inside the image so why do we still run a command to switch it on",
+    "path": "llm-zoomcamp-2026/02-vector-search/08-pgvector.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why is the model downloading package installed separately from the ones the app needs at run time",
+    "path": "llm-zoomcamp-2026/02-vector-search/09-onnx-embedder.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "what steps happen inside when the slim setup turns a sentence into a list of numbers",
+    "path": "llm-zoomcamp-2026/02-vector-search/09-onnx-embedder.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "do i have to convert the model into the slim format myself or is there a ready made one to grab",
+    "path": "llm-zoomcamp-2026/02-vector-search/09-onnx-embedder.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why do so many online guides push the heavyweight search setup from day one",
+    "path": "llm-zoomcamp-2026/02-vector-search/10-next-steps.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "when running both kinds of lookup at once how do you merge the two result lists into one",
+    "path": "llm-zoomcamp-2026/02-vector-search/10-next-steps.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "after grabbing the candidate results can something double check them and put the best ones on top",
+    "path": "llm-zoomcamp-2026/02-vector-search/10-next-steps.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why does most of the testing effort go into the part that finds documents instead of the part that writes the answers",
+    "path": "llm-zoomcamp-2026/04-evaluation/01-intro-evaluation.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "how can i make test questions when all i have is the answers already written down",
+    "path": "llm-zoomcamp-2026/04-evaluation/01-intro-evaluation.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "my scores look amazing on made up questions, should i actually trust them",
+    "path": "llm-zoomcamp-2026/04-evaluation/01-intro-evaluation.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why should the fake questions avoid reusing the exact words from the original text",
+    "path": "llm-zoomcamp-2026/04-evaluation/02-ground-truth.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "how do i get the model to hand back a clean list i can use in code instead of a paragraph i have to pick apart",
+    "path": "llm-zoomcamp-2026/04-evaluation/02-ground-truth.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "if money was no issue whats the highest quality way to build the test question set",
+    "path": "llm-zoomcamp-2026/04-evaluation/02-ground-truth.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why is doing the api calls one at a time so painfully slow",
+    "path": "llm-zoomcamp-2026/04-evaluation/03-ground-truth-batch.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "how do i keep one flaky request from killing the whole run",
+    "path": "llm-zoomcamp-2026/04-evaluation/03-ground-truth-batch.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "about how much money did it take to build the whole question file for the course",
+    "path": "llm-zoomcamp-2026/04-evaluation/03-ground-truth-batch.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why is the checking code written to accept whatever lookup method you hand it",
+    "path": "llm-zoomcamp-2026/04-evaluation/04-search-evaluation.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "how do we actually tell whether a result that came back is the right entry",
+    "path": "llm-zoomcamp-2026/04-evaluation/04-search-evaluation.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "do i need to pay for model calls just to test the document finding part",
+    "path": "llm-zoomcamp-2026/04-evaluation/04-search-evaluation.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why does it matter where in the list the correct entry lands and not just that it showed up",
+    "path": "llm-zoomcamp-2026/04-evaluation/05-search-metrics.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "how much credit does a query get when the right entry comes back third",
+    "path": "llm-zoomcamp-2026/04-evaluation/05-search-metrics.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "if the right doc only shows up for half my queries does that mean the other results are garbage",
+    "path": "llm-zoomcamp-2026/04-evaluation/05-search-metrics.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why did giving more weight to the question text end up hurting the results",
+    "path": "llm-zoomcamp-2026/04-evaluation/06-search-tuning.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "several weight combos scored exactly the same so why go with the small numbers",
+    "path": "llm-zoomcamp-2026/04-evaluation/06-search-tuning.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "would giving the model ten matches instead of five help or hurt",
+    "path": "llm-zoomcamp-2026/04-evaluation/06-search-tuning.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why make the grader spell out its thinking instead of just passing or failing",
+    "path": "llm-zoomcamp-2026/04-evaluation/11-evaluation-intro.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "when the final reply comes out bad which pieces of the setup could be responsible",
+    "path": "llm-zoomcamp-2026/04-evaluation/11-evaluation-intro.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "what extra stuff gets checked when grading the agent version compared to the basic pipeline",
+    "path": "llm-zoomcamp-2026/04-evaluation/11-evaluation-intro.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why wipe the spending tracker before kicking off the full run",
+    "path": "llm-zoomcamp-2026/04-evaluation/12-rag-answers.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "how do i look up the source answer each test question was created from",
+    "path": "llm-zoomcamp-2026/04-evaluation/12-rag-answers.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "how is the assistant class used here different from the one in module one",
+    "path": "llm-zoomcamp-2026/04-evaluation/12-rag-answers.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why bother reading through the replies that got flagged as failures",
+    "path": "llm-zoomcamp-2026/04-evaluation/13-llm-as-judge.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "what do i change when the grader keeps passing replies that are clearly wrong",
+    "path": "llm-zoomcamp-2026/04-evaluation/13-llm-as-judge.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "should a reply lose points for including extra info beyond the official answer",
+    "path": "llm-zoomcamp-2026/04-evaluation/13-llm-as-judge.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why do the steps the bot took get their own grade separate from the final reply",
+    "path": "llm-zoomcamp-2026/04-evaluation/14-agent-evaluation.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "the reply was wrong but the steps looked sensible, what does that point to",
+    "path": "llm-zoomcamp-2026/04-evaluation/14-agent-evaluation.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "does the grader get the whole chat log or just a slimmed down version of it",
+    "path": "llm-zoomcamp-2026/04-evaluation/14-agent-evaluation.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why rerun all the tests every time i tweak the prompt or change the model",
+    "path": "llm-zoomcamp-2026/04-evaluation/15-next-steps.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "whats the path from made up practice questions to a test set based on actual users",
+    "path": "llm-zoomcamp-2026/04-evaluation/15-next-steps.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "before any automated checks exist whats the best way to tell if the thing actually works",
+    "path": "llm-zoomcamp-2026/04-evaluation/15-next-steps.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why dont we have to rebuild the question answering part when we add all this tracking around it",
+    "path": "llm-zoomcamp-2026/05-monitoring/01-intro-monitoring.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "what three new pieces do we bolt on so we can watch the app while people actually use it",
+    "path": "llm-zoomcamp-2026/05-monitoring/01-intro-monitoring.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "does this module also cover keeping an eye on an agent or is that left for us to do",
+    "path": "llm-zoomcamp-2026/05-monitoring/01-intro-monitoring.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why bother putting the start command into a makefile",
+    "path": "llm-zoomcamp-2026/05-monitoring/02-assistant-setup.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "how do I ask the bot my own question straight from the terminal",
+    "path": "llm-zoomcamp-2026/05-monitoring/02-assistant-setup.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "what does each of the two helper files we grab from github actually take care of",
+    "path": "llm-zoomcamp-2026/05-monitoring/02-assistant-setup.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why does every call get its own record object with named fields instead of some loose dictionary",
+    "path": "llm-zoomcamp-2026/05-monitoring/04-metrics.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "how do we slip the measuring code in without rewriting the pipeline class that already works",
+    "path": "llm-zoomcamp-2026/05-monitoring/04-metrics.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "if two requests come in at once what happens to the stored numbers from the last call",
+    "path": "llm-zoomcamp-2026/05-monitoring/04-metrics.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why keep what the person actually typed separate from the full text we send to the model",
+    "path": "llm-zoomcamp-2026/05-monitoring/05-database.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "how do we find out the id the database just gave our new row so a rating can point at it later",
+    "path": "llm-zoomcamp-2026/05-monitoring/05-database.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "do I need to run the table setup script again every time I restart the database container",
+    "path": "llm-zoomcamp-2026/05-monitoring/05-database.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "whats wrong with just using the plain rows the database hands back",
+    "path": "llm-zoomcamp-2026/05-monitoring/06-querying.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "when the table gets big is there a cheaper way to sort by newest than using the date column",
+    "path": "llm-zoomcamp-2026/05-monitoring/06-querying.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why not poke around at the data in a notebook first like usual before writing the query script",
+    "path": "llm-zoomcamp-2026/05-monitoring/06-querying.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "isnt it wasteful to pull whole saved records just to draw two lines on a chart",
+    "path": "llm-zoomcamp-2026/05-monitoring/07-streamlit-dashboard.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "which four headline numbers sit at the top of the homemade stats page",
+    "path": "llm-zoomcamp-2026/05-monitoring/07-streamlit-dashboard.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why does the stats page have to run on a different port than the chat page",
+    "path": "llm-zoomcamp-2026/05-monitoring/07-streamlit-dashboard.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "people sometimes press the wrong rating button so is that signal even worth saving",
+    "path": "llm-zoomcamp-2026/05-monitoring/08-user-feedback.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "how can one table hold ratings that come from humans and ones that come from the machine",
+    "path": "llm-zoomcamp-2026/05-monitoring/08-user-feedback.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why do the rating buttons show up even before any answer has come back",
+    "path": "llm-zoomcamp-2026/05-monitoring/08-user-feedback.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why make the automatic grader write out its reasoning if nobody ever reads it",
+    "path": "llm-zoomcamp-2026/05-monitoring/09-built-in-judge.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "what happens when the graders reply comes back in a shape that doesnt match what we asked for",
+    "path": "llm-zoomcamp-2026/05-monitoring/09-built-in-judge.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "once real traffic shows up do we really have to grade every single reply",
+    "path": "llm-zoomcamp-2026/05-monitoring/09-built-in-judge.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why do the new quality charts look almost empty right after we add them",
+    "path": "llm-zoomcamp-2026/05-monitoring/10-feedback-dashboard.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "how does a single query split the ratings into a good pile and a bad pile",
+    "path": "llm-zoomcamp-2026/05-monitoring/10-feedback-dashboard.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "what stops the counter boxes from blowing up when nobody has rated anything yet",
+    "path": "llm-zoomcamp-2026/05-monitoring/10-feedback-dashboard.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "why does the pretend rating picker hand out way more good votes than bad ones",
+    "path": "llm-zoomcamp-2026/05-monitoring/11-synthetic-data.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "how fast does the pretend traffic flow in and how do I shut it off",
+    "path": "llm-zoomcamp-2026/05-monitoring/11-synthetic-data.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "do all the made up chats get a rating attached or only some of them",
+    "path": "llm-zoomcamp-2026/05-monitoring/11-synthetic-data.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "what does the heavier charting tool give us that the homemade page cant",
+    "path": "llm-zoomcamp-2026/05-monitoring/12-grafana.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "a long time window would mean way too many dots on the chart so how is that handled",
+    "path": "llm-zoomcamp-2026/05-monitoring/12-grafana.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "what exact name does the date column need in the query so the points land on the x axis",
+    "path": "llm-zoomcamp-2026/05-monitoring/12-grafana.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "what was so annoying about starting each container by hand that we moved everything into one file",
+    "path": "llm-zoomcamp-2026/05-monitoring/13-docker-compose.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "how do we make sure the database comes up before the app container starts",
+    "path": "llm-zoomcamp-2026/05-monitoring/13-docker-compose.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "after the one command brings everything up is there still a step I have to run myself",
+    "path": "llm-zoomcamp-2026/05-monitoring/13-docker-compose.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "whats the catch with tools that hand you the tracking and charts for free",
+    "path": "llm-zoomcamp-2026/05-monitoring/14-next-steps.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "how would you keep all the extra saving and grading from slowing down user replies in a real deployment",
+    "path": "llm-zoomcamp-2026/05-monitoring/14-next-steps.md",
+    "difficulty": "hard"
+  },
+  {
+    "question": "where should the records go instead of a regular database once the volume gets serious",
+    "path": "llm-zoomcamp-2026/05-monitoring/14-next-steps.md",
+    "difficulty": "hard"
+  }
+]
